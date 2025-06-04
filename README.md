@@ -31,12 +31,7 @@ adaptive_learning_project/
 │   ├── adaptive_test.py                     # Main Streamlit application
 │   ├── TRain.py                            # SAC model training script
 │   └── requirements.txt                     # Python dependencies
-├── app/                                     # Additional application files
-├── train/                                   # Training utilities
-├── data/                                    # Additional datasets
-├── model/                                   # Model checkpoints
-├── requirements.txt                         # Project dependencies
-└── README.md                               # Project documentation
+├
 ```
 
 ## 🚀 Installation & Setup
