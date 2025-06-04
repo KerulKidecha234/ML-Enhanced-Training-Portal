@@ -169,14 +169,6 @@ Trained models are automatically saved in the `model/` directory:
 - **📱 Mobile Application**: Native mobile app development
 - **🎮 Gamification**: Achievement systems and leaderboards
 
-## 👥 Contributors
-
-| Name | Student ID | Role |
-|------|------------|------|
-| **Bhavya Jappi** | 60009220004 | Lead Developer |
-| **Aniket Waghela** | 60009220033 | ML Engineer |
-| **Kerul Kidecha** | 60009220064 | Full Stack Developer |
-
 **Faculty Guide**: Prof. Poonam Jadhav
 
 ## 🏫 Institution
