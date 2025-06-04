@@ -1,167 +1,191 @@
-<h1 align="center">🚀 ML-Enhanced Training Portal</h1>
+# 🎓 ML-Enhanced Training Portal
 
----
+An intelligent adaptive learning platform powered by Soft Actor-Critic (SAC) reinforcement learning with LSTM networks to deliver personalized educational experiences.
 
-## 📖 Overview
+## 🌟 Overview
 
-The **ML-Enhanced Training Portal** uses a Soft Actor-Critic (SAC) reinforcement learning model with LSTM to deliver personalized learning paths for students.  
-It adapts module difficulty (Easy, Medium, Hard) based on performance metrics like score, time spent, and attempts — promoting both technical and soft skill growth.
-
----
+The ML-Enhanced Training Portal revolutionizes online learning by using advanced machine learning algorithms to create personalized learning paths. Our system employs a Soft Actor-Critic (SAC) reinforcement learning model with LSTM to dynamically recommend modules based on individual performance metrics, ensuring optimal learning outcomes for technical and soft skills development.
 
 ## ✨ Features
 
-- ✅ **Login System:** Secure access via Streamlit  
-- ✅ **Skill Quiz:** 5-question personalized quiz  
-- ✅ **Adaptive Learning:** Module difficulty adapted via SAC model  
-- ✅ **Performance Dashboard:** Visual progress insights using Altair  
-- ✅ **Reports:** Exportable CSV performance data  
+- **🔐 Secure Authentication**: Streamlit-based login system with student ID verification
+- **📝 Intelligent Assessment**: 5-question skill quiz for personalized recommendations
+- **🎯 Adaptive Learning**: SAC-driven difficulty adjustments (Easy, Medium, Hard)
+- **📊 Real-time Analytics**: Interactive progress tracking with Altair visualizations
+- **📈 Performance Reports**: Exportable CSV reports for detailed analysis
+- **🎨 Intuitive Interface**: Clean, responsive UI built with Streamlit
+- **🔄 Dynamic Content**: Continuously adapting content based on user performance
 
----
+## 🏗️ Project Structure
 
-<h2 align="center">📁 Project Structure</h2>
-
+```
 adaptive_learning_project/
 ├── ML-Enhanced-Training-Portal/
-│ ├── data/
-│ │ ├── adaptive_learning_dataset.csv # Training dataset
-│ │ └── questions.json # Quiz questions
-│ ├── model/
-│ │ ├── sac_adaptive_learning_model_actor.keras # SAC actor
-│ │ ├── sac_adaptive_learning_model_critic_1.keras # SAC critic 1
-│ │ └── sac_adaptive_learning_model_critic_2.keras # SAC critic 2
-│ ├── adaptive_test.py # Streamlit App
-│ ├── TRain.py # SAC Training Script
-│ └── requirements.txt # Dependencies
-├── app/ # Additional app files
-├── train/ # Additional training files
-├── data/ # Top-level duplicate?
-├── model/ # Top-level duplicate?
-├── requirements.txt # Top-level dependencies
-└── README.md # Project documentation
+│   ├── data/
+│   │   ├── adaptive_learning_dataset.csv    # Training dataset (1000+ records)
+│   │   └── questions.json                   # Domain-specific quiz questions
+│   ├── model/
+│   │   ├── sac_adaptive_learning_model_actor.keras      # SAC Actor Network
+│   │   ├── sac_adaptive_learning_model_critic_1.keras   # SAC Critic Network 1
+│   │   └── sac_adaptive_learning_model_critic_2.keras   # SAC Critic Network 2
+│   ├── adaptive_test.py                     # Main Streamlit application
+│   ├── TRain.py                            # SAC model training script
+│   └── requirements.txt                     # Python dependencies
+├── app/                                     # Additional application files
+├── train/                                   # Training utilities
+├── data/                                    # Additional datasets
+├── model/                                   # Model checkpoints
+├── requirements.txt                         # Project dependencies
+└── README.md                               # Project documentation
+```
 
-yaml
-Copy
-Edit
+## 🚀 Installation & Setup
 
----
-
-<h2 align="center">⚙️ Installation & Setup</h2>
-
-### 📌 Prerequisites
-
+### Prerequisites
 - Python 3.8+
 - pip (Python package manager)
-- (Optional) Virtual environment
+- Virtual environment (recommended)
 
----
-
-### 🧱 Step 1: Clone the Repository
-
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/KerulKidecha234/ML-Enhanced-Training-Portal.git
 cd ML-Enhanced-Training-Portal
-🧪 Step 2: Set Up Virtual Environment
-bash
-Copy
-Edit
+```
+
+### Step 2: Set up Virtual Environment
+```bash
+# Create virtual environment
 python -m venv venv
 
-# Windows
+# Activate virtual environment
+# On Windows:
 venv\Scripts\activate
-
-# macOS/Linux
+# On macOS/Linux:
 source venv/bin/activate
-📦 Step 3: Install Dependencies
-bash
-Copy
-Edit
+```
+
+### Step 3: Install Dependencies
+```bash
 pip install -r requirements.txt
-🚀 Step 4: Run the App
-bash
-Copy
-Edit
+```
+
+### Step 4: Run the Application
+```bash
 streamlit run adaptive_test.py
-🧑‍💻 Usage
-Login: Enter Student ID and job preference
+```
 
-Select Domain: Choose Aptitude, Technical, or Soft Skills
+The application will be available at `http://localhost:8501`
 
-Take Quiz: Answer 5 questions for tailored recommendations
+## 💡 Usage Guide
 
-Learn: Get dynamic module suggestions
+### Getting Started
+1. **Login**: Enter your Student ID and select your job preference
+2. **Domain Selection**: Choose from Aptitude, Technical, or Soft Skills
+3. **Assessment**: Complete the 5-question quiz for personalized recommendations
+4. **Learning**: Engage with adaptive modules tailored to your skill level
+5. **Progress Tracking**: Monitor your performance through interactive dashboards
+6. **Reports**: Export detailed performance analytics as CSV files
 
-Track: View dashboards, export performance reports
+### Learning Domains
+- **📚 Aptitude**: Logical reasoning, quantitative analysis, verbal ability
+- **💻 Technical**: Programming concepts, system design, algorithms
+- **🤝 Soft Skills**: Communication, leadership, teamwork, problem-solving
 
-🧠 Technologies
-ML Model: SAC with LSTM (TensorFlow/Keras)
+## 🔧 Technology Stack
 
-Data Processing: Pandas, NumPy, Scikit-learn
+### Machine Learning
+- **TensorFlow/Keras**: Neural network implementation
+- **Soft Actor-Critic (SAC)**: Reinforcement learning algorithm
+- **LSTM Networks**: Sequential data processing
+- **Scikit-learn**: Data preprocessing and evaluation
 
-Frontend: Streamlit, Altair
+### Data Processing
+- **Pandas**: Data manipulation and analysis
+- **NumPy**: Numerical computations
+- **JSON**: Question bank storage
+- **CSV**: Dataset management
 
-Backend: Python
+### Frontend & Visualization
+- **Streamlit**: Web application framework
+- **Altair**: Interactive data visualizations
+- **Python**: Backend logic
 
-Storage: JSON (quiz questions), CSV (training data)
+## 📊 Dataset Information
 
-📊 Dataset
-adaptive_learning_dataset.csv:
-Contains 1000 records with Student_ID, Previous_Score, Time_Spent, Attempt_Count, Module_Difficulty, and Next_Recommended_Module.
+### Training Dataset (`adaptive_learning_dataset.csv`)
+- **Records**: 1000+ student interaction records
+- **Features**:
+  - `Student_ID`: Unique identifier
+  - `Previous_Score`: Historical performance
+  - `Time_Spent`: Learning duration metrics
+  - `Attempt_Count`: Number of attempts
+  - `Module_Difficulty`: Encoded difficulty levels (0=Easy, 1=Medium, 2=Hard)
+  - `Next_Recommended_Module`: Target recommendations
 
-questions.json:
-Structured quiz questions based on domain and difficulty.
+### Question Bank (`questions.json`)
+Structured quiz questions organized by:
+- Domain categories (Aptitude, Technical, Soft Skills)
+- Difficulty levels (Easy, Medium, Hard)
+- Multiple choice format with correct answers
 
-🧪 Model Training
-File: TRain.py
+## 🤖 Model Architecture
 
-Architecture:
+### SAC Agent Configuration
+- **Actor Network**: LSTM with 128 units for sequential decision making
+- **Critic Networks**: Dual critics with 256 dense units each
+- **Training Episodes**: 1500 episodes with experience replay
+- **Replay Buffer**: 10,000 experience samples
+- **Batch Size**: 64 samples per training step
 
-Actor: LSTM (128 units)
+### Hyperparameters
+- **Discount Factor (γ)**: 0.99
+- **Soft Update Rate (τ)**: 0.002
+- **Entropy Coefficient (α)**: 0.1
+- **Learning Rate**: Adaptive based on performance
 
-Critics: Dense (256 units)
+### Reward System
+- **Correct Answer**: +2 points
+- **Incorrect Answer**: -1 point
+- **Time Bonus**: Additional rewards for efficient learning
 
-Training:
+## 🎯 Model Training
 
-Episodes: 1500
+To retrain the model with new data:
 
-Replay Buffer: 10,000
+```bash
+python TRain.py
+```
 
-Batch Size: 64
+Trained models are automatically saved in the `model/` directory:
+- Actor network for action selection
+- Critic networks for value estimation
 
-Hyperparameters:
+## 🔮 Future Enhancements
 
-Gamma: 0.99
+- **📈 Advanced Analytics**: Comprehensive soft skill assessment and analytics
+- **🥽 Immersive Learning**: VR/AR content integration for enhanced engagement
+- **👥 Collaborative Features**: Peer-to-peer learning and group challenges
+- **🌐 Multi-language Support**: Internationalization for global accessibility
+- **📱 Mobile Application**: Native mobile app development
+- **🎮 Gamification**: Achievement systems and leaderboards
 
-Alpha: 0.1
+## 👥 Contributors
 
-Tau: 0.002
+| Name | Student ID | Role |
+|------|------------|------|
+| **Bhavya Jappi** | 60009220004 | Lead Developer |
+| **Aniket Waghela** | 60009220033 | ML Engineer |
+| **Kerul Kidecha** | 60009220064 | Full Stack Developer |
 
-Rewards:
+**Faculty Guide**: Prof. Poonam Jadhav
 
-+2 for correct, -1 for incorrect
+## 🏫 Institution
 
-Use python TRain.py to retrain the model
-Models will be saved in the /model directory
+**Dwarkadas J. Sanghvi College of Engineering**  
+Computer Science Department  
+Mumbai, Maharashtra, India
 
-🚧 Future Plans
-Add soft skill analytics
+## 📄 License
 
-Integrate VR/AR-based learning
-
-Enable peer collaboration and feedback
-
-👥 Contributors
-Bhavya Jappi (60009220004)
-
-Aniket Waghela (60009220033)
-
-Kerul Kidecha (60009220064)
-
-Guide: Prof. Poonam Jadhav
-
-📄 License
-This project is licensed under the MIT License. See LICENSE for details.
-
-🙏 Acknowledgements
-Special thanks to Dr. Jadhav, Dr. Srivastava, Kriti, Dr. Vasudevan, and the CS Department of Dwarkadas J. Sanghvi College of Engineering.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
